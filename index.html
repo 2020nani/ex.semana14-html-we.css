@@ -201,19 +201,19 @@
     </div>
   </div>
 
-  <div class=" w3-content" id="Docentes">
+  <div class=" w3-content w3-display-container w3-center" id="Docentes">
     <h2 class="w3-text-cyan">Docentes</h2>
     <hr style="width:200px" class="w3-opacity">
-  <div class=" w3-margin w3-opacity w3-hover-opacity-off ">
-    <div class="w3-half "><img class=" w3-margin  " src="imagens/img1.png" alt=""></div>
-    <div class="w3-half ">
+   
+  <div class="slides w3-opacity w3-hover-opacity-off ">
+    <div class="w3-half"><img  src="imagens/img1.png" alt=""></div>
+    <div class="w3-half">
       <p>
       <h2 class="w3-text-cyan">Joao Mario de Moraes</h2><br />
       <h3 class="w3-text-cyan">Formacao Academica</h3>
       <ul>
         <li>Ciencias da computacao</li>
         <li>Engenheiro da computacao</li>
-
       </ul>
       <h3 class="w3-text-cyan">Atuacao Profissional</h3>
       <ul>
@@ -223,9 +223,9 @@
       </p>
     </div>
   </div>
-  <div class=" w3-margin w3-opacity w3-hover-opacity-off ">
-    <div class="w3-half "><img class="w3-margin  " src="imagens/img2.png" alt=""></div>
-    <div class="w3-half ">
+  <div class="slides w3-opacity w3-hover-opacity-off ">
+    <div class="w3-half "><img src="imagens/img2.png" alt=""></div>
+    <div class="w3-half">
       <p>
       <h2 class="w3-text-cyan">Fabio Amaral de Souza</h2><br />
       <h3 class="w3-text-cyan">Formacao Academica</h3>
@@ -234,7 +234,7 @@
         <li>Tecnologa de Analise Desenvolvimento de Sistemas</li>
         <li>Graduada em Segurança da Informacao</li>
       </ul>
-      <h3>Atuacao Profissional</h3>
+      <h3 class="w3-text-cyan"> Atuacao Profissional</h3>
       <ul>
         <li>Analista de Segurança da Informacao Center.SA</li>
         <li>Analista desenvolvimento de sofware Center.SA</li>
@@ -243,8 +243,8 @@
       </p>
     </div>
   </div>
-  <div class=" w3-margin w3-opacity w3-hover-opacity-off ">
-    <div class="w3-half "><img class="w3-margin " src="imagens/img3.png" alt=""></div>
+  <div class="slides w3-opacity w3-hover-opacity-off ">
+    <div class="w3-half "><img  src="imagens/img3.png" alt=""></div>
     <div class="w3-half">
       <p>
       <h2 class="w3-text-cyan">Marcos Paulo</h2><br />
@@ -263,8 +263,8 @@
       </p>
     </div>
   </div>
-  <div class=" w3-margin w3-opacity w3-hover-opacity-off ">
-    <div class="w3-half  "><img class="w3-margin " src="imagens/img4.png" alt=""></div>
+  <div class="slides w3-opacity w3-hover-opacity-off ">
+    <div class="w3-half  "><img  src="imagens/img4.png" alt=""></div>
     <div class="w3-half">
       <p>
       <h2 class="w3-text-cyan">Francisca de Moraes</h2><br />
@@ -282,10 +282,12 @@
       </ul>
       </p>
     </div>
-    </div>
-    
   </div>
-
+  <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-
+1)">&#10094;</button>
+ <button class="w3-button w3-white w3-display-right"
+onclick="plusDivs(1)">&#10095;</button>
+  </div>
   <div class="w3-padding-64 w3-content w3-" id="mercado">
     <h2 class="w3-text-cyan">Mercado de Trabalho</h2>
     <hr style="width:200px" class="w3-opacity">
@@ -432,8 +434,25 @@
         <a href="http://geead.cps.sp.gov.br/" target="_blank" class="">GEEAD</a>
       </p>
     </footer>
-
-
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      function plusDivs(n) {
+       showDivs(slideIndex += n);
+      }
+      function showDivs(n) {
+       var i;
+       var x = document.getElementsByClassName("slides");
+ if (n > x.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = x.length}
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ x[slideIndex-1].style.display = "block";
+}
+</script>
+    
+  
 
 
 </body>
